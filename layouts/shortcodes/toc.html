@@ -1,0 +1,9 @@
+
+{{ $val := .Get `arr` }}
+{{ $arr := split $val ","}}
+
+<p style="font-family:sans-serif;font-size:90%;line-height:1.2;margin-top:10px">
+{{ range $arr }}
+    <a href=#{{ replaceRE "(.*)#(.*)" "$2" . }} style="text-decoration:none">{{ replaceRE "(.*)#.*" "$1" . }}</a> <br />
+{{ end }}
+</p>
