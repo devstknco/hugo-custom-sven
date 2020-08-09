@@ -7,7 +7,7 @@ publishdir=$(echo $publishdir | tr -d \")
 
 #cannot rm publishdir since it is a git submodule
 #echo Deleting $publishdir ...
-#rm -rf $publishdir
+rm -rf $publishdir/*
 
 # Build the project.
 echo Building hugo ...
